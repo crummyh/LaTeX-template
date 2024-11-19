@@ -3,12 +3,12 @@
 
 \RequirePackage{xcolor}
 \RequirePackage{hyperref}
-\RequirePackage{fontspec}
-\RequirePackage{xunicode}
+%\RequirePackage{xunicode}
 \RequirePackage{fontspec}
 \RequirePackage{xltxtra}
-\RequirePackage{lmodern}
-\RequirePackage{listings}
+\RequirePackage{minted}
+
+\RequirePackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 \definecolor{accentColor}{HTML}{88C0D0}
 \definecolor{textColor}{HTML}{2E3440}
@@ -16,9 +16,19 @@
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 
-\DeclareOption{\commandName}{\commandsToRun}
-
-\DeclareOption{OptionToDiable}{\OptionNotUsed}
 \ProcessOptions\relax
 
-\LoadClass[twoside]{article}
+\LoadClass{article}
+
+\newfontfamily\bodytextfont[]{Open Sans}
+\newfontfamily\headertextfont[]{JetBrains Mono}[
+  FontFace={t}{n}{Font=* Thin},
+  FontFace={el}{n}{Font=* ExtraLight},
+  FontFace={l}{n}{Font=* Light},
+  FontFace={sb}{n}{Font=* SemiBold},
+  FontFace={eb}{n}{Font=* ExtraBold},
+]
+
+\setmainfont[Color=textColor]{Noto Sans}
+\setmonofont[Color=textColor]{JetBrains Mono}
+\setsansfont[Color=textColor]{Noto Sans}
