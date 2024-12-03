@@ -1,34 +1,39 @@
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{classworktemplate}[2024/11/19 Schoolwork LaTeX class]
+\NeedsTeXFormat{LaTeX2e}  % TeX Version to use
+\ProvidesClass{classworktemplate}[2024/12/3 Schoolwork LaTeX class] % Provide class info
 
-\RequirePackage{xcolor}
-\RequirePackage{hyperref}
-%\RequirePackage{xunicode}
-\RequirePackage{fontspec}
-\RequirePackage{xltxtra}
-\RequirePackage{minted}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % All undefined commands go to artical
+\ProcessOptions \relax
 
-\RequirePackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\LoadClass[a4paper,twoside]{article} % Load artical class
 
-\definecolor{accentColor}{HTML}{88C0D0}
-\definecolor{textColor}{HTML}{2E3440}
-\definecolor{subTitleColor}{HTML}{4C566A}
+\RequirePackage[left=1in,right=1in,top=1in,bottom=1in]{geometry} % Define margians
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+%---------------------------------%
+%-------{Required Packages}-------%
+%---------------------------------%
 
-\ProcessOptions\relax
+\RequirePackage{titlesec} % For setting margians
+\RequirePackage{xcolor} % For colors
+\usepackage[T1]{fontenc} % For fonts
 
-\LoadClass{article}
+\usepackage{lmodern} % Import default font
 
-\newfontfamily\bodytextfont[]{Open Sans}
-\newfontfamily\headertextfont[]{JetBrains Mono}[
-  FontFace={t}{n}{Font=* Thin},
-  FontFace={el}{n}{Font=* ExtraLight},
-  FontFace={l}{n}{Font=* Light},
-  FontFace={sb}{n}{Font=* SemiBold},
-  FontFace={eb}{n}{Font=* ExtraBold},
-]
+%---------------------------------%
+%---------{Define Colors}---------%
+%---------------------------------%
 
-\setmainfont[Color=textColor]{Noto Sans}
-\setmonofont[Color=textColor]{JetBrains Mono}
-\setsansfont[Color=textColor]{Noto Sans}
+\definecolor{mainTextColor}{HTML}{2E3440}
+\definecolor{fistAccentColor}{HTML}{88C0D0}
+\definecolor{secondAccentClor}{HTML}{D08770}
+\definecolor{lightTextColor}{HTML}{4C566A}
+
+%--------------------------------%
+%--------{Section Config}--------%
+%--------------------------------%
+
+\titleformat{\section}         % Customise the \section command 
+  {\Large\scshape\raggedright} % Make the \section headers large (\Large),
+                               % small capitals (\scshape) and left aligned (\raggedright)
+  {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
+  {}                           % Can be used to insert code before the heading
+  [\titlerule]                 % Inserts a horizontal line after the heading
