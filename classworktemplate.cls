@@ -61,9 +61,9 @@
 
 \renewcommand\maketitle{
   {\raggedright % Note the extra {
-  {\Huge \bfseries \@title }\\[4ex] 
-  {\Large  \@author}\\[4ex] 
-  \@date\\[8ex]
+  {\Huge \bfseries \@title }
+  \hfill \@date\\[1ex] 
+  {\Large  \@author}\\[2ex] 
     }} % note the extra }
 
 %--------------------------------%
