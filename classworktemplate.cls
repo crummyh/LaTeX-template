@@ -1,10 +1,10 @@
 \NeedsTeXFormat{LaTeX2e}  % TeX Version to use
-\ProvidesClass{classworktemplate}[2024/12/3 Schoolwork LaTeX class] % Provide class info
+\ProvidesClass{classworktemplate}% Provide class info
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % All undefined commands go to artical
 \ProcessOptions \relax
 
-\LoadClass[a4paper,twoside]{article} % Load artical class
+\LoadClass[letter,twoside]{article} % Load artical class
 
 \RequirePackage[left=1in,right=1in,top=1in,bottom=1in]{geometry} % Define margians
 
@@ -14,13 +14,15 @@
 
 \RequirePackage{titlesec} % For setting margians
 \RequirePackage{xcolor} % For colors
+\RequirePackage{titling} % For moddifying the base title
+
+\RequirePackage{DejaVuSans} % Import Main font
+\RequirePackage{FiraMono} % Import mono font
+
 \RequirePackage[T1]{fontenc} % For fonts
 
-\RequirePackage{lmodern} % Import font
-
 \RequirePackage{listings} % Required for Code
-
-
+\RequirePackage{csquotes}
 %---------------------------------%
 %---------{Define Colors}---------%
 %---------------------------------%
@@ -47,6 +49,24 @@
 \definecolor{nord14}{HTML}{A3BE8C}
 \definecolor{nord15}{HTML}{B48EAD}
 
+%---------------------------------%
+%----------{Font Config}----------%
+%---------------------------------%
+
+\renewcommand*\familydefault{\sfdefault}
+
+%--------------------------------%
+%---------{Title Config}---------%
+%--------------------------------%
+
+\renewcommand\maketitle{
+  {\raggedright % Note the extra {
+  \begin{center}
+  {\Huge \bfseries \sffamily \@title }\\[4ex] 
+  {\Large  \@author}\\[4ex] 
+  \@date\\[8ex]
+\end{center}}} % Note the extra }
+
 %--------------------------------%
 %--------{Section Config}--------%
 %--------------------------------%
@@ -63,14 +83,13 @@
 %---------------------------------%
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{nord4},   
+    backgroundcolor=\color{nord6},   
     commentstyle=\color{nord3},
     keywordstyle=\color{nord9},
     numberstyle=\tiny\color{nord1},
     stringstyle=\color{nord14},
-    basicstyle=\ttfamily\footnotesize,
+    basicstyle=\ttfamily\small,
     breakatwhitespace=false,         
-    breaklines=true,                 
     captionpos=b,                    
     keepspaces=true,                 
     numbers=left,                    
