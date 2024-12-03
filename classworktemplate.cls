@@ -61,11 +61,11 @@
 
 \renewcommand\maketitle{
   {\raggedright % Note the extra {
-  \begin{center}
+  \begin{flushleft}
   {\Huge \bfseries \sffamily \@title }\\[4ex] 
   {\Large  \@author}\\[4ex] 
   \@date\\[8ex]
-\end{center}}} % Note the extra }
+\end{flushleft}}} % Note the extra }
 
 %--------------------------------%
 %--------{Section Config}--------%
