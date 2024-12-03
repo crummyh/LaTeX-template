@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}  % TeX Version to use
 \ProvidesClass{classworktemplate}% Provide class info
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % All undefined commands go to artical
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % All undefined commands go to article
 \ProcessOptions \relax
 
 \LoadClass[letter,twoside]{article} % Load artical class
@@ -22,7 +22,7 @@
 \RequirePackage[T1]{fontenc} % For fonts
 
 \RequirePackage{listings} % Required for Code
-\RequirePackage{csquotes}
+\RequirePackage{csquotes} % For quotes
 %---------------------------------%
 %---------{Define Colors}---------%
 %---------------------------------%
@@ -61,19 +61,18 @@
 
 \renewcommand\maketitle{
   {\raggedright % Note the extra {
-  \begin{flushleft}
-  {\Huge \bfseries \sffamily \@title }\\[4ex] 
+  {\Huge \bfseries \@title }\\[4ex] 
   {\Large  \@author}\\[4ex] 
   \@date\\[8ex]
-\end{flushleft}}} % Note the extra }
+    }} % note the extra }
 
 %--------------------------------%
 %--------{Section Config}--------%
 %--------------------------------%
 
 \titleformat{\section}         % Customise the \section command 
-  {\Large\scshape\raggedright} % Make the \section headers large (\Large),
-                               % small capitals (\scshape) and left aligned (\raggedright)
+  {\Large\raggedright} % Make the \section headers large (\Large),
+                               % left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
   [\titlerule]                 % Inserts a horizontal line after the heading
