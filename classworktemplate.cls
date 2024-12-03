@@ -63,11 +63,11 @@
 %---------------------------------%
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
+    backgroundcolor=\color{nord4},   
+    commentstyle=\color{nord3},
+    keywordstyle=\color{nord9},
+    numberstyle=\tiny\color{nord1},
+    stringstyle=\color{nord14},
     basicstyle=\ttfamily\footnotesize,
     breakatwhitespace=false,         
     breaklines=true,                 
