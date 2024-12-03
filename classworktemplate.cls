@@ -70,13 +70,22 @@
 %--------{Section Config}--------%
 %--------------------------------%
 
-\titleformat{\section}         % Customise the \section command 
-  {\Large\raggedright} % Make the \section headers large (\Large),
-                               % left aligned (\raggedright)
-  {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
+\titleformat{\section}
+  {\Large\raggedright\bfseries} 
+  {}{0em}  
   {}                           % Can be used to insert code before the heading
   [\titlerule]                 % Inserts a horizontal line after the heading
-  
+
+\titleformat{\subsection}
+  {\large\raggedright\bfseries} 
+    {}{0em}  
+  {}                           % Can be used to insert code before the heading
+
+\titleformat{\subsubsection}
+  {\raggedright\bfseries} 
+    {}{0em}  
+  {}                           % Can be used to insert code before the heading
+
 %---------------------------------%
 %-------{Code Block Config}-------%
 %---------------------------------%
