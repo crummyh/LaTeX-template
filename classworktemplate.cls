@@ -15,6 +15,7 @@
 \RequirePackage{titlesec} % For setting margians
 \RequirePackage{xcolor} % For colors
 \RequirePackage{titling} % For moddifying the base title
+\RequirePackage{tcolorbox} % For boxes. 
 
 \RequirePackage{DejaVuSans} % Import Main font
 \RequirePackage{FiraMono} % Import mono font
@@ -23,6 +24,7 @@
 
 \RequirePackage{listings} % Required for Code
 \RequirePackage{csquotes} % For quotes
+
 %---------------------------------%
 %---------{Define Colors}---------%
 %---------------------------------%
@@ -61,9 +63,9 @@
 
 \renewcommand\maketitle{
   {\raggedright % Note the extra {
-  {\Huge \bfseries \@title }
+  {\huge \bfseries \@title }
   \hfill \@date\\[1ex] 
-  {\Large  \@author}\\[2ex] 
+  {\large \@author}\\[2ex] 
     }} % note the extra }
 
 %--------------------------------%
@@ -71,13 +73,13 @@
 %--------------------------------%
 
 \titleformat{\section}
-  {\Large\raggedright\bfseries} 
+  {\large\raggedright\bfseries} 
   {}{0em}  
   {}                           % Can be used to insert code before the heading
   [\titlerule]                 % Inserts a horizontal line after the heading
 
 \titleformat{\subsection}
-  {\large\raggedright\bfseries} 
+  {\normalsize\raggedright\bfseries} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
 
@@ -105,7 +107,9 @@
     showspaces=false,                
     showstringspaces=false,
     showtabs=false,                  
-    tabsize=2
+    tabsize=2,
+    %arc=5mm
 }
+
 
 \lstset{style=mystyle}
