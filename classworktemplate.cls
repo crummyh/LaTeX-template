@@ -19,7 +19,7 @@
 
 \RequirePackage[scaled]{berasans} % Import Main font (Sans Serif)
 \RequirePackage{FiraMono} % Import mono font
-\RequirePackage{libertine} % Import Serif Font
+\RequirePackage{paratype} % Import Serif Font
 
 \RequirePackage[T1]{fontenc} % For fonts
 
