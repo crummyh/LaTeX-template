@@ -15,7 +15,7 @@
 \RequirePackage{titlesec} % For setting margians
 \RequirePackage{xcolor} % For colors
 \RequirePackage{titling} % For moddifying the base title
-\RequirePackage{tikz} % For graphics
+\RequirePackage{eso-pic} % For Colored boxes
 
 \RequirePackage[scaled]{berasans} % Import Main font (Sans Serif)
 \RequirePackage{FiraMono} % Import mono font
