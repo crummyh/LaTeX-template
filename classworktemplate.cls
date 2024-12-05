@@ -19,7 +19,6 @@
 
 \RequirePackage[scaled]{berasans} % Import Main font (Sans Serif)
 \RequirePackage{FiraMono} % Import mono font
-\RequirePackage{paratype} % Import Serif Font
 
 \RequirePackage[T1]{fontenc} % For fonts
 
@@ -64,9 +63,9 @@
 
 \renewcommand\maketitle{
   {\raggedright % Note the extra {
-  {\huge \rmfamily \bfseries \@title }
+  {\huge \bfseries \@title }
   \hfill \@date\\[1ex] 
-  {\large \rmfamily \@author}\\[2ex] 
+  {\large \@author}\\[2ex] 
     }} % note the extra }
 
 %--------------------------------%
@@ -74,18 +73,18 @@
 %--------------------------------%
 
 \titleformat{\section}
-  {\large\raggedright\rmfamily\bfseries} 
+  {\large\raggedright\bfseries} 
   {}{0em}  
   {}                           % Can be used to insert code before the heading
   [\titlerule]                 % Inserts a horizontal line after the heading
 
 \titleformat{\subsection}
-  {\normalsize\raggedright\rmfamily\bfseries} 
+  {\normalsize\raggedright\bfseries} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
 
 \titleformat{\subsubsection}
-  {\raggedright\rmfamily\bfseries} 
+  {\raggedright\bfseries} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
 
