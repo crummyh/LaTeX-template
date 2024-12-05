@@ -15,7 +15,6 @@
 \RequirePackage{titlesec} % For setting margians
 \RequirePackage{xcolor} % For colors
 \RequirePackage{titling} % For moddifying the base title
-\RequirePackage{tcolorbox} % For boxes. 
 
 \RequirePackage[scaled]{berasans} % Import Main font (Sans Serif)
 \RequirePackage{FiraMono} % Import mono font
@@ -58,6 +57,11 @@
 \renewcommand*\familydefault{\sfdefault}
 
 %--------------------------------%
+%-----------{Commands}-----------%
+%--------------------------------%
+
+
+%--------------------------------%
 %---------{Title Config}---------%
 %--------------------------------%
 
@@ -96,7 +100,7 @@
     backgroundcolor=\color{nord6},   
     commentstyle=\color{nord3},
     keywordstyle=\color{nord9},
-    numberstyle=\tiny\color{nord1},
+    numberstyle=\footnotesize\color{nord1},
     stringstyle=\color{nord14},
     basicstyle=\ttfamily\small,
     breakatwhitespace=false,         
