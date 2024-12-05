@@ -17,7 +17,7 @@
 \RequirePackage{titling} % For moddifying the base title
 \RequirePackage{tcolorbox} % For boxes. 
 
-\RequirePackage{DejaVuSans} % Import Main font
+\RequirePackage[scaled]{berasans} % Import Main font
 \RequirePackage{FiraMono} % Import mono font
 
 \RequirePackage[T1]{fontenc} % For fonts
