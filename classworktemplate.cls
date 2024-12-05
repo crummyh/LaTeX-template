@@ -35,7 +35,7 @@
 
 \definecolor{darkAccentColor}{HTML}{2D4059}
 \definecolor{redAccentColor}{HTML}{EA5455}
-\definecolor{tealAccentColr}{HTML}{21A0A0}
+\definecolor{tealAccentColor}{HTML}{21A0A0}
 
 
 %---------------------------------%
@@ -54,6 +54,10 @@
 %--------------------------------%
 
 \renewcommand\maketitle{
+  {
+  \AddToShipoutPictureBG*{\AtPageUpperLeft{%
+  \color{tealAccentColor}\rule{.33\paperwidth}{\paperheight}}}
+  }
   {\raggedright % Note the extra {
   {\huge \bfseries \@title }
   \hfill \@date\\[1ex] 
@@ -85,12 +89,12 @@
 %---------------------------------%
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{nord6},   
-    commentstyle=\color{nord3},
-    keywordstyle=\color{nord9},
-    numberstyle=\footnotesize\color{nord1},
-    stringstyle=\color{nord14},
-    basicstyle=\ttfamily\small,
+    backgroundcolor=\color{darkAccentColor},   
+    commentstyle=\color{lightTextColor},
+    keywordstyle=\color{redAccentColor},
+    numberstyle=\footnotesize\color{black},
+    stringstyle=\color{tealAccentColor},
+    basicstyle=\color{white}\ttfamily\small,
     breakatwhitespace=false,         
     captionpos=b,                    
     keepspaces=true,                 
