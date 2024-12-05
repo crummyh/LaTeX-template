@@ -17,8 +17,9 @@
 \RequirePackage{titling} % For moddifying the base title
 \RequirePackage{tcolorbox} % For boxes. 
 
-\RequirePackage[scaled]{berasans} % Import Main font
+\RequirePackage[scaled]{berasans} % Import Main font (Sans Serif)
 \RequirePackage{FiraMono} % Import mono font
+\RequirePackage{libertine} % Import Serif Font
 
 \RequirePackage[T1]{fontenc} % For fonts
 
@@ -63,9 +64,9 @@
 
 \renewcommand\maketitle{
   {\raggedright % Note the extra {
-  {\huge \bfseries \@title }
+  {\huge \rmfamily \bfseries \@title }
   \hfill \@date\\[1ex] 
-  {\large \@author}\\[2ex] 
+  {\large \rmfamily \@author}\\[2ex] 
     }} % note the extra }
 
 %--------------------------------%
@@ -73,18 +74,18 @@
 %--------------------------------%
 
 \titleformat{\section}
-  {\large\raggedright\bfseries} 
+  {\large\raggedright\rmfamily\bfseries} 
   {}{0em}  
   {}                           % Can be used to insert code before the heading
   [\titlerule]                 % Inserts a horizontal line after the heading
 
 \titleformat{\subsection}
-  {\normalsize\raggedright\bfseries} 
+  {\normalsize\raggedright\rmfamily\bfseries} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
 
 \titleformat{\subsubsection}
-  {\raggedright\bfseries} 
+  {\raggedright\rmfamily\bfseries} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
 
