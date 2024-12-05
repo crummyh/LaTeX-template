@@ -55,13 +55,18 @@
 
 \renewcommand\maketitle{
   {
-  \AddToShipoutPictureBG*{\AtPageUpperLeft{%
-  \color{tealAccentColor}\rule{.33\paperwidth}{\paperheight}}}
+  \hspace{-2em}
+  \AddToShipoutPictureBG*{\AtTextUpperLeft{%
+  \color{redAccentColor}\rule[-4em]{0.1in}{4em}}}
+  \AddToShipoutPictureBG*{\AtTextUpperLeft{%
+  \color{tealAccentColor}\rule[-2.66em]{0.1in}{2.66em}}}
+  \AddToShipoutPictureBG*{\AtTextUpperLeft{%
+  \color{darkAccentColor}\rule[-1.33em]{0.1in}{1.33em}}}
   }
   {\raggedright % Note the extra {
   {\huge \bfseries \@title }
   \hfill \@date\\[1ex] 
-  {\large \@author}\\[2ex] 
+  {\large \hspace{1em} \@author}\\[2ex] 
     }} % note the extra }
 
 %--------------------------------%
