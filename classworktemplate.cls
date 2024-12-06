@@ -29,17 +29,18 @@
 %---------{Define Colors}---------%
 %---------------------------------%
 
-% https://coolors.co/89a8b2-b3c8cf-9abf80-484848-ffffff
+% https://coolors.co/5b7f8b-8bacb6-93bb77-3d3d3d-ffffff
 
-\definecolor{mainTextColor}{HTML}{484848}
+\definecolor{mainTextColor}{HTML}{3D3D3D}
 \definecolor{lightTextColor}{HTML}{E5E1DA}
 
 \definecolor{mainPageColor}{HTML}{FFFFFF}
 
-\definecolor{darkAccentColor}{HTML}{89A8B2}
-\definecolor{lightAccentColor}{HTML}{B3C8CF}
-\definecolor{greenAccentColor}{HTML}{9ABF80}
+\definecolor{darkAccentColor}{HTML}{5B7F8B}
+\definecolor{lightAccentColor}{HTML}{8BACB6}
+\definecolor{greenAccentColor}{HTML}{93BB77}
 
+\AtBeginDocument{\globalcolor{mainTextColor}}
 
 %---------------------------------%
 %----------{Font Config}----------%
@@ -51,6 +52,9 @@
 %-----------{Commands}-----------%
 %--------------------------------%
 
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
 
 %--------------------------------%
 %---------{Title Config}---------%
@@ -67,9 +71,9 @@
   \color{darkAccentColor}\rule[-1.33em]{0.05in}{1.33em}}}
   }
   {\raggedright % Note the extra {
-  {\huge \bfseries \@title }
+  {\huge \bfseries \color{darkAccentColor} \@title }
   \hfill \@date\\[1ex] 
-  {\large \hspace{1em} \@author}\\[2ex] 
+  {\large \hspace{1em} \color{lightAccentColor} \@author}\\[2ex] 
     }} % note the extra }
 
 %--------------------------------%
