@@ -73,7 +73,7 @@
   {\raggedright % Note the extra {
   {\huge \bfseries \color{darkAccentColor} \@title }
   \hfill \@date\\[1ex] 
-  {\large \hspace{1em} \color{lightAccentColor} \@author}\\[2ex] 
+  {\Large \hspace{0.6em} \color{lightAccentColor} \@author}\\[2ex] 
     }} % note the extra }
 
 %--------------------------------%
@@ -81,18 +81,18 @@
 %--------------------------------%
 
 \titleformat{\section}
-  {\large\raggedright\bfseries} 
+  {\Large\raggedright\bfseries\color{darkAccentColor}} 
   {}{0em}  
   {}                           % Can be used to insert code before the heading
-  [\titlerule]                 % Inserts a horizontal line after the heading
+  [\color{lightAccentColor}\titlerule]                 % Inserts a horizontal line after the heading
 
 \titleformat{\subsection}
-  {\normalsize\raggedright\bfseries} 
+  {\large\raggedright\bfseries\color{darkAccentColor}} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
 
 \titleformat{\subsubsection}
-  {\raggedright\bfseries} 
+  {\raggedright\bfseries\color{darkAccentColor}} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
 
