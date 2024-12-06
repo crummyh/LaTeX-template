@@ -15,6 +15,7 @@
 \RequirePackage{titlesec} % For setting margians
 \RequirePackage{xcolor} % For colors
 \RequirePackage{titling} % For moddifying the base title
+\RequirePackage{eso-pic} % For Colored boxes
 
 \RequirePackage[scaled]{berasans} % Import Main font (Sans Serif)
 \RequirePackage{FiraMono} % Import mono font
@@ -28,27 +29,18 @@
 %---------{Define Colors}---------%
 %---------------------------------%
 
-\definecolor{mainTextColor}{HTML}{2E3440}
-\definecolor{fistAccentColor}{HTML}{88C0D0}
-\definecolor{secondAccentClor}{HTML}{D08770}
-\definecolor{lightTextColor}{HTML}{4C566A}
+% https://coolors.co/5b7f8b-8bacb6-93bb77-3d3d3d-ffffff
 
-\definecolor{nord0}{HTML}{2E3440}
-\definecolor{nord1}{HTML}{3B4252}
-\definecolor{nord2}{HTML}{434C5E}
-\definecolor{nord3}{HTML}{4C566A}
-\definecolor{nord4}{HTML}{D8DEE9}
-\definecolor{nord5}{HTML}{E5E9F0}
-\definecolor{nord6}{HTML}{ECEFF4}
-\definecolor{nord7}{HTML}{8FBCBB}
-\definecolor{nord8}{HTML}{88C0D0}
-\definecolor{nord9}{HTML}{81A1C1}
-\definecolor{nord10}{HTML}{5E81AC}
-\definecolor{nord11}{HTML}{BF616A}
-\definecolor{nord12}{HTML}{D08770}
-\definecolor{nord13}{HTML}{EBCB8B}
-\definecolor{nord14}{HTML}{A3BE8C}
-\definecolor{nord15}{HTML}{B48EAD}
+\definecolor{mainTextColor}{HTML}{3D3D3D}
+\definecolor{lightTextColor}{HTML}{E5E1DA}
+
+\definecolor{mainPageColor}{HTML}{FFFFFF}
+
+\definecolor{darkAccentColor}{HTML}{5B7F8B}
+\definecolor{lightAccentColor}{HTML}{8BACB6}
+\definecolor{greenAccentColor}{HTML}{93BB77}
+
+\AtBeginDocument{\globalcolor{mainTextColor}}
 
 %---------------------------------%
 %----------{Font Config}----------%
@@ -60,16 +52,28 @@
 %-----------{Commands}-----------%
 %--------------------------------%
 
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
 
 %--------------------------------%
 %---------{Title Config}---------%
 %--------------------------------%
 
 \renewcommand\maketitle{
+  {
+  \hspace{-2em}
+  \AddToShipoutPictureBG*{\AtTextUpperLeft{%
+  \color{greenAccentColor}\rule[-4em]{0.05in}{4em}}}
+  \AddToShipoutPictureBG*{\AtTextUpperLeft{%
+  \color{lightAccentColor}\rule[-2.66em]{0.05in}{2.66em}}}
+  \AddToShipoutPictureBG*{\AtTextUpperLeft{%
+  \color{darkAccentColor}\rule[-1.33em]{0.05in}{1.33em}}}
+  }
   {\raggedright % Note the extra {
-  {\huge \bfseries \@title }
+  {\huge \bfseries \color{darkAccentColor} \@title }
   \hfill \@date\\[1ex] 
-  {\large \@author}\\[2ex] 
+  {\Large \hspace{0.6em} \color{lightAccentColor} \@author}\\[2ex] 
     }} % note the extra }
 
 %--------------------------------%
@@ -77,18 +81,18 @@
 %--------------------------------%
 
 \titleformat{\section}
-  {\large\raggedright\bfseries} 
+  {\Large\raggedright\bfseries\color{darkAccentColor}} 
   {}{0em}  
   {}                           % Can be used to insert code before the heading
-  [\titlerule]                 % Inserts a horizontal line after the heading
+  [\color{lightAccentColor}\titlerule]                 % Inserts a horizontal line after the heading
 
 \titleformat{\subsection}
-  {\normalsize\raggedright\bfseries} 
+  {\large\raggedright\bfseries\color{darkAccentColor}} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
 
 \titleformat{\subsubsection}
-  {\raggedright\bfseries} 
+  {\raggedright\bfseries\color{darkAccentColor}} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
 
@@ -97,12 +101,12 @@
 %---------------------------------%
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{nord6},   
-    commentstyle=\color{nord3},
-    keywordstyle=\color{nord9},
-    numberstyle=\footnotesize\color{nord1},
-    stringstyle=\color{nord14},
-    basicstyle=\ttfamily\small,
+    backgroundcolor=\color{mainTextColor},   
+    commentstyle=\color{lightTextColor},
+    keywordstyle=\color{darkAccentColor},
+    numberstyle=\footnotesize\color{mainTextColor},
+    stringstyle=\color{lightAccentColor},
+    basicstyle=\color{mainPageColor}\ttfamily\small,
     breakatwhitespace=false,         
     captionpos=b,                    
     keepspaces=true,                 
@@ -112,8 +116,6 @@
     showstringspaces=false,
     showtabs=false,                  
     tabsize=2,
-    %arc=5mm
 }
-
 
 \lstset{style=mystyle}
