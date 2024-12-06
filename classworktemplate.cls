@@ -29,13 +29,16 @@
 %---------{Define Colors}---------%
 %---------------------------------%
 
-\definecolor{mainTextColor}{HTML}{424242}
+% https://coolors.co/89a8b2-b3c8cf-9abf80-484848-ffffff
 
-\definecolor{lightTextColor}{HTML}{DECDC3}
+\definecolor{mainTextColor}{HTML}{484848}
+\definecolor{lightTextColor}{HTML}{E5E1DA}
 
-\definecolor{darkAccentColor}{HTML}{2D4059}
-\definecolor{redAccentColor}{HTML}{EA5455}
-\definecolor{tealAccentColor}{HTML}{21A0A0}
+\definecolor{mainPageColor}{HTML}{FFFFFF}
+
+\definecolor{darkAccentColor}{HTML}{89A8B2}
+\definecolor{lightAccentColor}{HTML}{B3C8CF}
+\definecolor{greenAccentColor}{HTML}{9ABF80}
 
 
 %---------------------------------%
@@ -57,11 +60,11 @@
   {
   \hspace{-2em}
   \AddToShipoutPictureBG*{\AtTextUpperLeft{%
-  \color{redAccentColor}\rule[-4em]{0.1in}{4em}}}
+  \color{greenAccentColor}\rule[-4em]{0.05in}{4em}}}
   \AddToShipoutPictureBG*{\AtTextUpperLeft{%
-  \color{tealAccentColor}\rule[-2.66em]{0.1in}{2.66em}}}
+  \color{lightAccentColor}\rule[-2.66em]{0.05in}{2.66em}}}
   \AddToShipoutPictureBG*{\AtTextUpperLeft{%
-  \color{darkAccentColor}\rule[-1.33em]{0.1in}{1.33em}}}
+  \color{darkAccentColor}\rule[-1.33em]{0.05in}{1.33em}}}
   }
   {\raggedright % Note the extra {
   {\huge \bfseries \@title }
@@ -94,12 +97,12 @@
 %---------------------------------%
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{darkAccentColor},   
+    backgroundcolor=\color{mainTextColor},   
     commentstyle=\color{lightTextColor},
-    keywordstyle=\color{redAccentColor},
-    numberstyle=\footnotesize\color{black},
-    stringstyle=\color{tealAccentColor},
-    basicstyle=\color{white}\ttfamily\small,
+    keywordstyle=\color{darkAccentColor},
+    numberstyle=\footnotesize\color{mainTextColor},
+    stringstyle=\color{lightAccentColor},
+    basicstyle=\color{mainPageColor}\ttfamily\small,
     breakatwhitespace=false,         
     captionpos=b,                    
     keepspaces=true,                 
