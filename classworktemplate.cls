@@ -116,8 +116,6 @@
     showstringspaces=false,
     showtabs=false,                  
     tabsize=2,
-    %arc=5mm
 }
-
 
 \lstset{style=mystyle}
