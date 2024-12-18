@@ -18,6 +18,7 @@
 \RequirePackage{eso-pic} % For Colored boxes
 
 \RequirePackage[scaled]{berasans} % Import Main font (Sans Serif)
+\RequirePackage{PlayfairDisplay} % Import Serif font for titles
 \RequirePackage{FiraMono} % Import mono font
 
 \RequirePackage[T1]{fontenc} % For fonts
@@ -31,14 +32,12 @@
 
 % https://coolors.co/5b7f8b-8bacb6-93bb77-3d3d3d-ffffff
 
-\definecolor{mainTextColor}{HTML}{3D3D3D}
-\definecolor{lightTextColor}{HTML}{E5E1DA}
+\definecolor{mainTextColor}{HTML}{414651}
+\definecolor{lightTextColor}{HTML}{FCFCFC}
 
 \definecolor{mainPageColor}{HTML}{FFFFFF}
 
-\definecolor{darkAccentColor}{HTML}{5B7F8B}
-\definecolor{lightAccentColor}{HTML}{8BACB6}
-\definecolor{greenAccentColor}{HTML}{93BB77}
+\definecolor{accentColor}{HTML}{A5B68D}
 
 \AtBeginDocument{\globalcolor{mainTextColor}}
 
@@ -61,19 +60,10 @@
 %--------------------------------%
 
 \renewcommand\maketitle{
-  {
-  \hspace{-2em}
-  \AddToShipoutPictureBG*{\AtTextUpperLeft{%
-  \color{greenAccentColor}\rule[-4em]{0.05in}{4em}}}
-  \AddToShipoutPictureBG*{\AtTextUpperLeft{%
-  \color{lightAccentColor}\rule[-2.66em]{0.05in}{2.66em}}}
-  \AddToShipoutPictureBG*{\AtTextUpperLeft{%
-  \color{darkAccentColor}\rule[-1.33em]{0.05in}{1.33em}}}
-  }
   {\raggedright % Note the extra {
-  {\huge \bfseries \color{darkAccentColor} \@title }
+  {\Huge \bfseries \rmfamily \color{accentColor} \@title }
   \hfill \@date\\[1ex] 
-  {\Large \hspace{0.6em} \color{lightAccentColor} \@author}\\[2ex] 
+  {\Large \rmfamily \itshape \color{mainTextColor} \@author}\\[2ex] 
     }} % note the extra }
 
 %--------------------------------%
@@ -81,20 +71,22 @@
 %--------------------------------%
 
 \titleformat{\section}
-  {\Large\raggedright\bfseries\color{darkAccentColor}} 
+  {\LARGE \raggedright \bfseries \rmfamily \color{accentColor}} 
   {}{0em}  
   {}                           % Can be used to insert code before the heading
-  [\color{lightAccentColor}\titlerule]                 % Inserts a horizontal line after the heading
+  [\color{accentColor}\titlerule]                 % Inserts a horizontal line after the heading
 
 \titleformat{\subsection}
-  {\large\raggedright\bfseries\color{darkAccentColor}} 
+  {\Large \raggedright \bfseries \rmfamily \color{accentColor}} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
 
 \titleformat{\subsubsection}
-  {\raggedright\bfseries\color{darkAccentColor}} 
+  {\large \raggedright \bfseries \rmfamily \color{accentColor}} 
     {}{0em}  
   {}                           % Can be used to insert code before the heading
+
+  
 
 %---------------------------------%
 %-------{Code Block Config}-------%
@@ -103,9 +95,9 @@
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{mainTextColor},   
     commentstyle=\color{lightTextColor},
-    keywordstyle=\color{darkAccentColor},
+    keywordstyle=\color{accentColor},
     numberstyle=\footnotesize\color{mainTextColor},
-    stringstyle=\color{lightAccentColor},
+    stringstyle=\color{accentColor},
     basicstyle=\color{mainPageColor}\ttfamily\small,
     breakatwhitespace=false,         
     captionpos=b,                    
