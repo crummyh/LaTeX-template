@@ -52,8 +52,12 @@
 %--------------------------------%
 
 \newcommand{\globalcolor}[1]{%
-  \color{#1}\global\let\default@color\current@color
+  \color{mainTextColor}\global\let\default@color\current@color
 }
+
+\renewcommand{\mkbegdispquote}
+    {\selectfont\itshape\textooquote}
+\renewcommand{\mkenddispquote}{\textcoquote}
 
 %--------------------------------%
 %---------{Title Config}---------%
