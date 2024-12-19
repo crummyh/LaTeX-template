@@ -18,7 +18,7 @@
 \RequirePackage{eso-pic} % For Colored boxes
 
 \RequirePackage[scaled]{berasans} % Import Main font (Sans Serif)
-\RequirePackage{PlayfairDisplay} % Import Serif font for titles
+\RequirePackage{OldStandard} % Import Serif font for titles
 \RequirePackage{FiraMono} % Import mono font
 
 \RequirePackage[T1]{fontenc} % For fonts
@@ -61,9 +61,9 @@
 
 \renewcommand\maketitle{
   {\raggedright % Note the extra {
-  {\Huge \bfseries \rmfamily \color{accentColor} \@title }
+  {\hspace{-1 em} \Huge \bfseries \rmfamily \color{accentColor} \@title }
   \hfill \@date\\[1ex] 
-  {\Large \rmfamily \itshape \color{mainTextColor} \@author}\\[2ex] 
+  { \Large \rmfamily \itshape \color{mainTextColor} \@author}\\[2ex] 
     }} % note the extra }
 
 %--------------------------------%
