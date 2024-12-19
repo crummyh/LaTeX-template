@@ -7,3 +7,5 @@ A LaTeX document class for my school assignments and reports. Based of my design
 ![Static Badge](https://img.shields.io/badge/LATEX-teal?style=for-the-badge&logo=latex)
 ![Static Badge](https://img.shields.io/badge/license-mit-blue?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/works_on-my_machine-green?style=for-the-badge)
+![GitHub file size in bytes](https://img.shields.io/github/size/crummyh/LaTeX-template/classworktemplate.cls?branch=main&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/crummyh/LaTeX-template?style=for-the-badge)
