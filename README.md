@@ -1,6 +1,7 @@
 # LaTeX-template
-A LaTeX document class for my school assignments and reports.
+A LaTeX document class for my school assignments and reports. Based of my design files.
 
-![Static Badge](https://img.shields.io/badge/Works_on-my_machine-blue?style=for-the-badge)
+> [!IMPORTANT]
+> This project is a work in progress, and might be changed or broken at any moment.
 
-## Work in Progress
+[![forthebadge](https://forthebadge.com/images/badges/license-mit.svg)](https://forthebadge.com)
