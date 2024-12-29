@@ -1,5 +1,5 @@
 # LaTeX-template
-A LaTeX document class for my school assignments and reports. Based of my design files.
+A LaTeX document class for my school assignments and reports. Based of my [design](https://github.com/crummyh/design) files.
 
 > [!IMPORTANT]
 > This project is a work in progress, and might be changed or broken at any moment.
